@@ -1,0 +1,40 @@
+.about {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.aboutTop {
+    height: 65%;
+       
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.aboutBottom {
+    display: flex;
+    flex-direction: column;
+    /* height: 5%; */
+    align-items: center;
+    margin-top: 70px;
+}
+
+.aboutBottom p {
+    width: relative;
+    padding: 30px;
+}
+
+.about .aboutBottom h1 {
+    font-weight: 400;
+    font-size: 40px;
+    color: black;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    transform: translateY(-40px);
+}
