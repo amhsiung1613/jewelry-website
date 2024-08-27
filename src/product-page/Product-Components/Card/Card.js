@@ -1,11 +1,16 @@
 // import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 // import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 // import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import React, { useContext } from "react";
 import FavIconSwitcher from "../../../components/FavIconSwitcher"
 import CartIconSwitcher from "../../../components/CartIconSwitcher"
 import "./Card.css"
+import { ShopContext } from "../../../context/shop-context";
 
-const Card = ({ image, name, price }) => {
+const Card = ({ id, image, name, price }) => {
+  const { addToCart, cartItems } = useContext(ShopContext);
+  const cartItemCount = cartItems[id];
+  
   return (
     <>
       <section className="card">
@@ -18,9 +23,12 @@ const Card = ({ image, name, price }) => {
             </div>
             <div className="bag">
               <FavIconSwitcher />
-              <CartIconSwitcher />
+              {/* <CartIconSwitcher /> */}
             </div>
           </section>
+          <button className="addToCartBttn" onClick={() => addToCart(id)}>
+          Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
+          </button>
         </div>
       </section>
     </>

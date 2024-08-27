@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from "./components/Navbar";
 // import Carousel from "./components/Carousel/Carousel"
-// import Products from "./product-page/display";
+import Products from "./product-page/display";
 // import Search from "./pages/Search";
 import Favorites from "./pages/Favorites";
 import About from "./pages/About";
@@ -24,7 +24,7 @@ function App() {
           <Routes>
             <Route path="/" exact element={<Home />}/>
             <Route path="/home" exact element={<Home />} />
-            <Route path="/products" exact element={<Shop />}/>  
+            <Route path="/products" exact element={<Products />}/>  
             {/* <Route path="/search" exact element={<Search />}/>   */}
             <Route path="/favorites" exact element={<Favorites />}/>
             <Route path="/cart" exact element={<Cart />}/>
