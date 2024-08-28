@@ -23,8 +23,8 @@
 // export default ShoppingCart
 
 import React, { useContext } from "react";
-import { ShopContext } from "../../../context/shop-context";
-import productList from "../../../inventory/ProductList";
+import { ShopContext } from "../../context/shop-context";
+import productList from "../../inventory/ProductList";
 import { CartItem } from "./cart-item";
 import { useNavigate } from "react-router-dom";
 
@@ -63,7 +63,12 @@ const Cart = () => {
           </button>
         </div>
       ) : (
-        <h2> Your Shopping Cart is Empty</h2>
+        <>
+          <h2> Your Shopping Cart is Empty</h2>
+          <div className="checkout">
+            <button onClick={() => navigate("/products")}> Continue Shopping </button>
+          </div>
+        </>
       )}
     </div>
   );

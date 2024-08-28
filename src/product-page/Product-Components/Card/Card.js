@@ -5,11 +5,11 @@ import React, { useContext } from "react";
 import FavIconSwitcher from "../../../components/FavIconSwitcher"
 import CartIconSwitcher from "../../../components/CartIconSwitcher"
 import "./Card.css"
-import { ShopContext } from "../../../context/shop-context";
+// import { ShopContext } from "../../../context/shop-context";
 
 const Card = ({ id, image, name, price }) => {
-  const { addToCart, cartItems } = useContext(ShopContext);
-  const cartItemCount = cartItems[id];
+  // const { addToCart, cartItems } = useContext(ShopContext);
+  // const cartItemCount = cartItems[id];
   
   return (
     <>
@@ -22,13 +22,10 @@ const Card = ({ id, image, name, price }) => {
               ${price}
             </div>
             <div className="bag">
-              <FavIconSwitcher />
-              {/* <CartIconSwitcher /> */}
+              <FavIconSwitcher productId={id}/>
+              <CartIconSwitcher productId={id}/>
             </div>
           </section>
-          <button className="addToCartBttn" onClick={() => addToCart(id)}>
-          Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
-          </button>
         </div>
       </section>
     </>

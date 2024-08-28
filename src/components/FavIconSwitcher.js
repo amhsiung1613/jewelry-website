@@ -1,18 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import IconButton from '@mui/material/IconButton';
+import { FavContext } from '../context/fav-context';
 
-function IconSwitcher() {
-  const [icon, setIcon] = useState('full');
+function IconSwitcher({ productId }) {
+  // const [icon, setIcon] = useState('full');
+  const [ isInFav, setIsInFav ] = useState(false);
+  const { addToFav, removeFromFav, favItems } = useContext(FavContext);
+
+  React.useEffect(() => {
+    setIsInFav(!!favItems[productId]);
+  }, [favItems, productId]);
 
   const toggleIcon = () => {
-    setIcon(prevIcon => (prevIcon === 'full' ? 'half' : 'full'));
+    if (isInFav) {
+      removeFromFav(productId);
+    } else {
+      addToFav(productId);
+    }
+    setIsInFav(prevState => !prevState);
   };
 
   return (
     <IconButton onClick={toggleIcon}>
-      {icon === 'full' ? <FavoriteBorderIcon /> : <FavoriteIcon />}
+      {isInFav ? <FavoriteIcon /> : <FavoriteBorderIcon />}
     </IconButton>
   );
 }

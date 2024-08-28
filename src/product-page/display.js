@@ -54,12 +54,9 @@ function Display() {
     return filteredProducts.map(
       ({ id, image, name, price }) => (
         <Card
-          // key={Math.random()}
           id={id}
           image={image}
           name={name}
-          // star={star}
-          // reviews={reviews}
           price={price}
         />
       )

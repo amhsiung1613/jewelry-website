@@ -1,0 +1,43 @@
+.fav .title{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.fav .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    /* justify-content: center;
+    align-items: center; */
+    /* margin-left: 20rem;
+    margin-top: 2rem; */
+    z-index: -2;
+}
+
+.favItem {
+    /* height: 350px; */
+    margin: 20px;
+    border: 2px solid #ededed;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.favItem img {
+    width: 200px;
+    height: 175px;
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    margin-bottom: 1rem;
+}
+
+.checkout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
