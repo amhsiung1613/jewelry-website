@@ -25,18 +25,18 @@ function Navbar() {
             <Link to="/products"> Products </Link>
             {/* <Link to="/search"> Search </Link> */}
             <Link to="/favorites"> Favorites </Link>
-            <Link to="/about"> About </Link>
             <Link to="/cart" > Cart </Link> 
             <Link to="/account"> Account </Link>
+            <Link to="/about"> About </Link>
           </div>
         </div>
         <div className="rightSide">
           <Link to="/products"> Products </Link>
           {/* <Link to="/search"> Search </Link> */}
           <Link to="/favorites"> Favorites </Link>
-          <Link to="/about"> About </Link>
           <Link to="/cart" > Cart </Link>
           <Link to="/account"> Account </Link>
+          <Link to="/about"> About </Link>
           
           <button onClick={toggleNavbar}>
             <ReorderIcon />

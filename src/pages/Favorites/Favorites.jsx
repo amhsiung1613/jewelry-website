@@ -16,7 +16,7 @@ const Fav = () => {
   return (
     <div className="fav">
       <div className="title">
-        <h2>Your Favorite Items</h2>
+        <h2>Your Favorites</h2>
       </div>
       <div className="content">
         {productList.map((product) => {
