@@ -1,5 +1,45 @@
+h2{
+    /* position: absolute;  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.categories {
+    width: 100vw;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.categories .card {
+    width: 260px;
+    padding: 30px;
+    
+}
+
+.categories .card .img{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.categories .card .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
 .reviews {
     width: 100%;
     height: 500px;
-    /* background-color: rgb(93, 70, 56); */
+    background-color: rgb(93, 70, 56);
 }

@@ -10,6 +10,8 @@ import Home from "./pages/Home/Home";
 import Footer from "./components/Footer";
 import Cart from './pages/Cart/Cart';
 import Account from "./pages/Account/Account"
+import Register from "./pages/Register/Register"
+import PasswordForget from "./pages/password-forgot/Password-forgot"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import Display from "./product-page/display";
 
@@ -35,6 +37,8 @@ function App() {
               <ShoppingCart cartItems={Display.cartItems} handleAddproduct={Display.handleAddproduct}/>/</Route> */}
             <Route path="/account" exact element={<Account />}/>  
             <Route path="/about" exact element={<About />}/>  
+            <Route path='/register' exact element={<Register />}/>
+            <Route path='/password-forget' exact element={<PasswordForget />}/>
           </Routes>
           <Footer />
         </Router>

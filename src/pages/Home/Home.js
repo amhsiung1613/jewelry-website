@@ -4,6 +4,9 @@ import Carousel from '../../components/Carousel/Carousel';
 // import App from "../components/carousel-new/App";
 import React from 'react';
 import "./Home.css";
+import Rings from "../../assets/ring-images/ring-category-cover.jpg"
+import Necklace from "../../assets/necklace-images/diamond-necklace.jpeg"
+import Earring from "../../assets/earring-images/gold-diamond-twist-earrings.jpeg"
 
 function Home() {
   
@@ -12,6 +15,21 @@ function Home() {
       {/* <h2>Latest News</h2> */}
       <div>
         <Carousel />
+      </div>
+      <h2>Categories</h2>
+      <div className='categories'>
+        <div className='card'>
+          <img src={Rings} alt='Rings' className='img'/>
+          <h3 className='title'>Rings</h3>
+        </div>
+        <div className='card'>
+          <img src={Necklace} alt='Necklace' className='img'/>
+          <h3 className='title'>Necklaces</h3>
+        </div>
+        <div className='card'>
+          <img src={Earring} alt='Earring' className='img'/>
+          <h3 className='title'>Earrings</h3>
+        </div>
       </div>
       <div className="reviews">
         
